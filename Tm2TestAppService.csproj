@@ -157,6 +157,15 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="eMaffMapArea\css\bootstrap.min.css" />
+    <Content Include="eMaffMapArea\css\eMAFF_common.css" />
+    <Content Include="eMaffMapArea\css\map.css" />
+    <Content Include="eMaffMapArea\css\map_control.css" />
+    <Content Include="eMaffMapArea\js\bootstrap.min.js" />
+    <Content Include="eMaffMapArea\js\jquery.min.js" />
+    <Content Include="eMaffMapArea\js\Map_Control.js" />
+    <Content Include="eMaffMapArea\js\Map_Control_0.js" />
+    <Content Include="eMaffMapArea\js\popper.min.js" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -170,6 +179,9 @@
     <Content Include="Areas\eMaffMapArea\Views\Map\Map.cshtml" />
     <Content Include="Areas\eMaffMapArea\Views\Map\css\bootstrap.min.css.map" />
     <Content Include="Areas\eMaffMapArea\Views\Map\js\bootstrap.min.js.map" />
+    <Content Include="eMaffMapArea\css\bootstrap.min.css.map" />
+    <Content Include="eMaffMapArea\js\bootstrap.min.js.map" />
+    <Content Include="eMaffMapArea\js\popper.min.js.map" />
     <None Include="Properties\PublishProfiles\TM2TestApp - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
