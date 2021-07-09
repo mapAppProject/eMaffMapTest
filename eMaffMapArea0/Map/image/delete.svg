@@ -1,9 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 17 17">
-  <g id="group_2946" data-name="group_2946" transform="translate(-247 -420)">
-    <g id="circle_279" data-name="circle_279" transform="translate(247 420)" fill="none" stroke="#828cb2" stroke-width="2.5">
-      <circle cx="8.5" cy="8.5" r="8.5" stroke="none"/>
-      <circle cx="8.5" cy="8.5" r="7.25" fill="none"/>
-    </g>
-    <line id="line_1" data-name="line_1" x1="10" y2="10" transform="translate(250.5 423.5)" fill="none" stroke="#828cb2" stroke-width="2.5"/>
-  </g>
-</svg>
