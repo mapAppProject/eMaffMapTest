@@ -1,0 +1,308 @@
+
+.tab_contents {
+	background-color: #ffffff;
+	width: 100%;
+	/*height: 99vh;*/
+	height: 100%;
+	background-color: white;
+	
+    display: flex;
+    flex-direction: column;
+
+}
+
+/*タブボタンデザイン*/
+.tab_lab1, .tab_lab2, .tab_lab3 {
+	background: #d3d3d3;
+	color: #000000;
+	width: 30%;
+	border: 1px solid;
+    margin-left: -6px;
+    padding-top: 10px;
+    text-align: center;
+}
+
+/*テーブルのデザイン*/
+.data_list {
+	font-family: "メイリオ", sans-serif;
+	/*margin-left: 0px;*/
+}
+
+/*テーブルの操作列*/
+
+.operation {
+	position: sticky;
+	left: 0;
+}
+
+/* テーブル */
+/* 罫線 */
+.data_listth {
+	border: 1px solid;
+}
+/*こっち使ってます*/
+th.data_list {
+	font-weight: inherit;
+	border-top: 1.5px solid #343a40;
+	border-left: 1.5px solid #ffffff;
+	border-right: 1.5px solid #ffffff;
+	background-color: #e5eafc;
+}
+
+th.data_list:first-child {
+	border-left: 1.5px solid #e5eafc;
+	position: sticky;
+	left: 0;
+	z-index: 1;
+}
+
+th.data_list:nth-child(2) {
+	border-left: 1.5px solid #e5eafc;
+	position: sticky;
+	left: 215px;
+	z-index: 2;
+}
+
+th.data_list:last-child {
+	border-right: 1.5px solid #e5eafc;
+}
+td.data_list {
+	border: 1.5px solid #343a40;
+}
+
+td.data_list:first-child {
+	border-left: 1.5px solid #ffffff;
+	position: sticky;
+	left: 0;
+	z-index: 1;
+	background-color: white;
+
+}
+
+td.data_list:nth-child(2) {
+	border-left: 1.5px solid #ffffff;
+	position: sticky;
+	left: 215px;
+	z-index: 2;
+	background-color: white;
+}
+
+
+td.data_list:last-child {
+	border-right: 1.5px solid #ffffff;
+}
+
+/*タブにチェック入ったとき*/
+#tab1:checked~.tab_lab1 {
+	background: #f5f5f5;
+	color: #000000;
+}
+#tab2:checked~.tab_lab2 {
+	background: #f5f5f5;
+	color: #000000;
+}
+#tab3:checked~.tab_lab3 {
+	background: #f5f5f5;
+	color: #000000;
+}
+
+/*タブボタンとボックス連動*/
+.panels {
+	flex-grow: 1;
+}
+#tab1:checked~.panels #area1 {
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+#tab2:checked~.panels #area2 {
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+#tab3:checked~.panels #area3 {
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+
+/*チェックボックスとボックス非表示*/
+input[name="check"] {
+	display: none;
+}
+
+.panel {
+	padding: 0px;
+	display: none;
+}
+
+.panel_table1 {
+	margin-left: -20px;
+	width: 100%;
+	overflow-y: scroll;
+	overflow-x: scroll;
+	white-space: nowrap;
+	-webkit-overflow-scrolling: touch;
+	height:79vh;
+}
+
+.panel_table2 {
+	display: flex;
+	/*margin-left: -20px;*/
+	font-size: 12px;
+	background: #ffffff;
+	width: 100%;
+	white-space: nowrap;
+	-webkit-overflow-scrolling: touch;
+	height: 400px;
+	
+	/* 縦方向に伸ばす */
+	flex-direction: column;
+	flex-basis: 0;
+	justify-content: flex-start;
+	flex-grow: 1;
+}
+
+/*テーブルのデザイン*/
+.data_list {
+	font-family: "メイリオ", sans-serif;
+}
+
+/* テーブル */
+select {
+	width: 200px;
+	height: 30px;
+	position:relative;
+}
+
+.addbutton {
+	width: 200px;
+	height: 50px;
+	position:relative;
+}
+
+a {
+	text-decoration: underline;
+	color:#4169e1;
+}
+
+.accordion{
+  width:100%;
+  padding:0;
+  color:#fff;
+  background-color:rgba(60,104,105,1);
+  margin-left: -10px;
+}
+.accordion,.menu{
+  list-style: none;
+}
+
+.menu{
+  line-height: 40px;
+  font-size:1.1em;
+  text-shadow: 2px 4px 3px rgba(0,0,0,.1);
+  border-bottom:7px solid #fafafa;
+}
+
+.menu:before{
+  font-family: "Font Awesome 5 Free";
+  color: #fff;
+  font-weight: 900;
+  padding-right:7px;
+  padding-left:10px;
+  text-shadow: initial;
+}
+
+/*　ハンバーガーボタン　*/
+.hamburger {
+  display : block;
+  position: fixed;
+  z-index : 3;
+  top   : 0px;
+  width : 20px;
+  height: 50px;
+  cursor: pointer;
+  text-align: center;
+}
+.hamburger span {
+  display : block;
+  position: absolute;
+  width   : 30px;
+  height  : 2px ;
+  left    : 6px;
+  background : #fff;
+  -webkit-transition: 0.3s ease-in-out;
+  -moz-transition   : 0.3s ease-in-out;
+  transition        : 0.3s ease-in-out;
+}
+.hamburger span:nth-child(1) {
+  top: 10px;
+}
+.hamburger span:nth-child(2) {
+  top: 20px;
+}
+.hamburger span:nth-child(3) {
+  top: 30px;
+}
+
+
+.list{
+  padding-top:5px;
+  background-color:#fbfbfb;
+}
+
+.list a{
+  display:block;
+  text-decoration: none;
+  line-height: 40px;
+  color:#888;
+}
+.hover{
+  background-color:#fcd69e;
+}
+
+.foldingLayer {
+  position:absolute;
+  left: 69%;
+  top: 45%;
+}
+
+.foldingButton {
+  text-align: center;
+  background-color: silver;
+  display: block;
+  padding-right:5px;
+  padding-left:5px;
+  height: 50px;
+  font-size: 10px
+}
+
+.addListButton {
+	width: 30%;
+	height: 50px;
+	margin-left : -20px;
+	position:relative;
+}
+
+.backColor {
+	background-color:rgba(60,104,105,1);
+}
+
+.scroll {
+	overflow-y: scroll;
+	padding-bottom: 200px;
+}
+
+/*ページトップ部分、戻るボタンと文字列を横並びにしたいのでflex row */
+.page_title {
+	display: flex;
+	flex-direction: row;
+	background-color: rgba(38,41,52,1);
+	color: rgba(255,255,255,1);
+}
+
+.viewArea {
+	width: 1024px;
+	height: 768px;
+	margin: 0 auto;
+}

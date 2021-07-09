@@ -1,0 +1,446 @@
+.contents {
+	width: 100vw;
+	height: 100vw;
+	margin: 0 auto;
+	position:relative;
+	top: 10px;
+	left: 100%;
+	background: #F5F5F5;
+}
+.contents_pls {
+	position:relative;
+	left: 0px;
+}
+
+.subtitle {
+	top: 3px;
+	width: 100%;
+	padding: 3px;
+	background-color: #343a40;
+	color: #FFFF;
+	font-weight: bolder;
+	font-size: 20px;
+	left: 10px;
+}
+
+.lab_chiban, .lab_area, .lab_chimoku, .lab_status, .lab_plan {
+	border: 1px solid;
+	padding: 3px;
+	background-color: #DCDCDC;
+	text-align:center;
+	margin: 30px;
+}
+
+#lab {
+	border: 1px solid;
+	padding: 3px;
+	background-color: #DCDCDC;
+	text-align:center;
+	margin: 30px;
+}
+/*
+#lab_chiban, #lab_area, #lab_id, #lab_name, #lab_privilege{
+	width: 180px;
+	height: 30px;
+}
+*/
+
+.lab_select {
+	position:relative;
+	left: 1px;
+	width: 180px;
+	height: 30px;
+}
+
+.lab_check1, lab_check2, lab_check3 {
+	position:relative;
+	left: 0px;
+}
+
+.lab_btn {
+	background-color: white;
+	display: block;
+	position:relative;
+	width: 80px;
+	height: 30px;
+}
+
+.page_btn1 {
+	position: fixed;
+	bottom: 10%;
+	margin-left: 42%;
+	z-index: 500;
+}
+.page_btn_area {
+	position:fixed;
+	bottom:0;
+	width: 100%;
+	box-sizing: border-box;
+	height:110px;;
+	background: #ffffff;
+	z-index:500;
+}
+
+/*テーブルのデザイン*/
+
+.lab_table {
+	position:relative;
+	top: 40px;
+	table-layout: auto;
+	max-width: 1500px;
+	overflow: auto;
+	overflow-y: hidden;
+
+}
+
+.nouchi_update {
+	position: relative;
+	top: 30px;
+}
+
+/* テーブル */
+
+.fixed {
+	position: sticky;
+}
+
+/* 罫線 */
+th {
+	padding: 3px;
+	width: 250px;
+	height: 30px;
+}
+td {
+	border: 1px solid;
+	padding: 3px;
+	width: 250px;
+}
+
+.noneborder {
+	width: 100px;
+	border: 0px;
+}
+
+#noneborder {
+	border: 0px;
+}
+
+.address {
+	width: 100px;
+}
+
+.update_date {
+	width: 120px;
+	position: sticky;
+	position: -webkit-sticky;
+	left: 0px;
+	z-index: 1;
+	background: #F5F5F5;
+}
+
+.update_name {
+	width: 100px;
+	position: sticky;
+	position: -webkit-sticky;
+	left: 120px;
+	z-index: 1;
+	background: #F5F5F5;
+}
+
+.cntrl {
+	width: 100px;
+	position: sticky;
+	position: -webkit-sticky;
+	right: 0;
+	z-index: 1;
+	background: #FFFFFF;
+}
+
+
+img {
+	border: 1px solid;
+	width: 80px;
+	height: 80px;
+}
+
+/*
+select {
+	width: 300px;
+	height: 50px;
+	position:relative;
+	left: 30px;
+}
+*/
+
+a {
+	text-decoration: underline;
+	color:#4169e1;
+}
+
+/* ここから基本的にmap系のcssからコピペ*/
+/* 検索ボタン */
+.search_button {
+	width: 8em;
+	margin-bottom: 1%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/*テーブルのデザイン*/
+table.data_list {
+	margin-top: 0px;
+}
+
+th.data_list {
+	font-weight: inherit;
+	border-left: 1.5px solid #ffffff;
+	border-right: 1.5px solid #ffffff;
+	background-color: #e5eafc;
+
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+	z-index: 1;
+}
+
+th.data_list:first-child {
+	border-left: 1.5px solid #e5eafc;
+	position: sticky;
+	left: 0;
+	z-index: 2;
+	width: 35%;
+}
+
+th.data_list:nth-child(2) {
+	width: 30%;
+}
+
+th.data_list:nth-child(3) {
+	width: 20%;	
+}
+
+th.data_list:last-child {
+	border-right: 1.5px solid #e5eafc;
+	width: 15%;
+}
+
+/* 中道修正 */
+td.data_list {
+	border: 1.5px solid rgba(38,41,52,1);
+}
+
+td.data_list:first-child {
+	border-left: 1.5px solid #ffffff;
+	position: sticky;
+	left: 0;
+	z-index: 1;
+	background-color: white;
+
+}
+
+td.data_list:last-child {
+	border-right: 1.5px solid #ffffff;
+}
+
+.panel_table {
+	overflow: scroll;
+	display: flex;
+	/*margin-left: -20px;*/
+	font-size: 15px;
+	background: #ffffff;
+	width: 80%;
+	margin-right: auto;
+	margin-left: auto;
+	white-space: nowrap;
+	-webkit-overflow-scrolling: touch;
+	
+	/* 縦方向に伸ばす */
+	flex-direction: column;
+	flex-basis: 0;
+	justify-content: flex-start;
+	flex-grow: 1;
+}
+
+/*ページトップ部分、戻るボタンと文字列を横並びにしたいのでflex row */
+.page_title {
+	display: flex;
+	flex-direction: row;
+	background-color: rgba(38,41,52,1);
+	color: rgba(255,255,255,1);
+}
+
+/*20210602 福嶋追加 */
+/*「トップページに戻る」の右寄せのため、子要素を左右配置設定*/
+.page_title{
+	justify-content: space-between;
+}
+/*タイトル部分をflex-growで広げるように設定（タイトル部分のクラスがなかったため input直後のdivに設定）*/
+.page_title input + div{
+	flex-grow: 1;
+}
+/*「トップページに戻る」部分のボタン設定*/
+.page_title .return_top .btn{
+	position: static;
+	left: 0;
+	margin: 5px;
+	padding: 2px 1em;
+	text-decoration: none;
+}
+
+.open {
+	cursor:pointer; /* マウスオーバーでカーソルの形状を変えることで、クリックできる要素だとわかりやすいように */
+	text-decoration: underline;
+	color:#4169e1;
+}
+#pop-up {
+	display: none; /* label でコントロールするので input は非表示に */
+}
+.overlay {
+	display: none; /* input にチェックが入るまでは非表示に */
+}
+#pop-up:checked + .overlay {
+	display: block;
+	z-index: 9999;
+	background-color: #00000070;
+	position: fixed;
+	width: 100%;
+	height: 100vh;
+	top: 0;
+	left: 0;
+}
+.window {
+	width: 90vw;
+	max-width: 380px;
+	height: 240px;
+	background-color: #ffffff;
+	border-radius: 6px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+.text {
+	font-size: 18px;
+	margin: 0;
+}
+.close {
+	cursor:pointer;
+	position: absolute;
+	top: 4px;
+	right: 4px;
+	font-size: 20px;
+}
+
+html {
+	height: 100vh;
+	width: 100vw;
+}
+
+body {
+	font-family: 'ヒラギノ角ゴ Pro W3','Osaka','メイリオ','Meiryo','ＭＳ Ｐゴシック',sans-serif;
+	width: 100%;
+	height: 100%;
+	min-width: 100%;
+	min-height: 100%;
+	margin: 0 auto;
+	position:relative;
+}
+
+.base {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  /*width: 98vw;*/
+  /*height: 98vh;*/
+  width: 100%;
+  height: 100%;
+}
+
+button.link-style-btn{
+  cursor: pointer;
+  border: none;
+  background: none;
+  color: #0033cc;
+}
+button.link-style-btn:hover{
+  text-decoration: underline;
+  color: #002080;
+}
+/* 検索フォーム行 */
+.search_form_row:first {
+	padding-top: 0px;
+}
+.search_form_row {
+	margin: 1em 10em;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	width: 100%;
+}
+.search_form_row:last {
+	padding-bottom: 0px;
+}
+
+/* 検索フォーム部品 */
+.search_form_item {
+	display: block;
+	width: 100%;
+	padding: 0em .1em;
+	border: 2px solid #828cb2;
+	height: 1.75em;
+	font-size: 15px;
+	font-weight: 400;
+	line-height: 1.5;
+	color: #495057;
+	background-color: #fff;
+	background-clip: padding-box;
+	border-radius: .25rem;
+}
+
+.panel_content {
+	/*top:  -7px;*/
+	margin: 0em;
+	background: #e5eafc/*#f5f5f5*/;
+	/*margin-left: -100%;*/
+	/*height:90vh;*/
+	height: 100%;
+	display: flex;
+	flex-basis: 0;
+	flex-direction: column;
+}
+
+
+/* 検索結果エリア */
+.search_detail_area {
+	margin-top: 2.5em;
+	margin-bottom: 1.5em;
+	overflow: auto;
+}
+
+.search_area {
+	padding-right: 30%;
+}
+
+.viewArea {
+	max-width: 1920px;
+	max-height: 1080px;
+	width: 100%;
+	height: 100%;
+	margin: 0 auto;
+}
+
+/* 削除ボタン */
+.delete {
+	width: 25px;
+	height: 25px;
+	padding-bottom: 3px;
+	border: none;
+}
+
+.result_area {
+	width: 90%;
+	height: 100%;
+	margin: 0 auto;
+}

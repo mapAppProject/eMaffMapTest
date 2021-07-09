@@ -1,0 +1,176 @@
+body { margin: 0; padding: 0; }
+#map { position: absolute; top: 0; bottom: 0; width: 70%; }
+
+
+/* btn-select-black : btnの選択時background-color指定を黒くする */
+.btn-select-black:not(:disabled):not(.disabled):active, .btn-select-black:not(:disabled):not(.disabled).active, .show > .btn-select-black.dropdown-toggle {
+  color: $lite_text_color_dark_bright;
+  background-color: #343a40!important;
+  border-color: #343a40!important;
+  color: #f8f9fa!important;
+}
+
+/* キリの良い数字に直しただけ */
+.class1 {
+  width: 70%;
+}
+.class2 {
+  width: 30%;
+  /* 右ペイン全体の色指定 */
+  background-color: #f8f9fa;
+  /* 検索結果エリアを下まで埋められるようdisplay:flex指定 */
+  display: flex;
+}
+
+
+/* ハンバーガーメニューの戻るボタン */
+.ham_layer {
+    position:absolute;
+    right: 30%;
+    top: .5em;
+}
+.hamburger_back {
+	border-top-left-radius: 0.5rem !important;
+    border-top-right-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+    border-bottom-left-radius: 0.5rem !important;
+}
+
+/*
+ * Hide high-res map rendering
+ */
+.hidden-map {
+    overflow: hidden;
+    height: 0;
+    width: 0;
+    position: fixed;
+}
+
+/* キリの良い数字に直しただけ */
+.layer1 {
+  position:absolute;
+  /*left: 57%;*/
+  right: 35%;
+  top: 20px;
+  width: 300px;
+}
+
+/* 航空写真/地形図 */
+.map_menu {
+  width: 100%;
+  padding: .1em;
+}
+
+/* 台帳タブ */
+.ledger_tab {
+	border : 2px solid #828cb2;
+	padding: .1em 1.25em;
+	min-width: 10em;
+}
+.ledger_tab:hover {
+	border : 2px solid #828cb2;
+}
+/* 台帳タブのエリア */
+.panel_tabkey_area {
+	margin: .5em 1.5em;
+}
+
+/*検索メニューヘッダ*/
+.header_search {
+	margin: .1em;
+	padding-bottom: 20px;
+	border-bottom: 2px solid #f8f9fa
+}
+/*検索メニューの下のボーダー*/
+.border_search {
+	border-top: 2px solid #f8f9fa
+}
+
+/* 検索ボタン */
+.search_button {
+	width: 8em;
+	margin-bottom: 2%;
+}
+/* 検索結果行列 */
+.search_detail_col {
+    padding: 0;
+}
+/* 削除ボタン */
+.delete_button {
+    border : 2px solid #828cb2;
+	font-size: 12px;
+}
+.delete_button:hover {
+    border : 2px solid #828cb2;
+}
+
+/*memo:現地確認地図機能では未使用にしたけど
+  他のhtmlが壊れないように残しておきます*/
+.submenu {
+  background-color:white;
+  margin-top: -8px;
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px solid;
+  width: 98%;
+}
+/*memo:現地確認地図機能では未使用にしたけど
+  他のhtmlが壊れないように残しておきます*/
+.submenu_th {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  border: 1px solid;
+}
+
+/*レイヤー選択の高さを狭くする*/
+.list-group .list-group-sm{
+  padding: .1rem 1.25rem;
+}
+
+.button_th {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  background-color: silver;
+  display: block;
+  padding-right:20px;
+  padding-left:20px;
+  height: 25px;
+  font-size: 8px
+}
+
+/*memo:現地確認地図機能では未使用にしたけど
+  他のhtmlが壊れないように残しておきます*/
+/*タブボタンデザイン*/
+.tab_gsi1 {
+	background: #d3d3d3;
+	color: #000000;
+	width: 49%;
+	border: 1px solid;
+    margin-left: 1px;
+}
+.tab_gsi2 {
+	background: #d3d3d3;
+	color: #000000;
+	width: 49%;
+	border: 1px solid;
+    margin-left: -6px;
+}
+
+/*チェックボックスとボックス非表示*/
+input[name="check2"] {
+	display: none;
+}
+
+/*タブボタンとボックス連動*/
+#gsi-picture:checked~.tab_gsi1 {
+	background: #f5f5f5;
+	color: #000000;
+}
+#gsi-vector:checked~.tab_gsi2 {
+	background: #f5f5f5;
+	color: #000000;
+}
+
+

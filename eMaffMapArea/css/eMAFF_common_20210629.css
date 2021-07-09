@@ -1,0 +1,60 @@
+html {
+	font-family: 'ヒラギノ角ゴ Pro W3','Osaka','メイリオ','Meiryo','ＭＳ Ｐゴシック',sans-serif;
+	font-size: 15px;
+}
+body {
+	font-size: 15px;
+	margin: 0;
+	padding: 0;
+/*	overflow: hidden;*/
+}
+
+/*無効化されているボタンのマウスカーソルとアウトライン非表示*/
+button[disabled]{
+	cursor: default;
+	outline: none;
+}
+.btn[disabled],
+.btn:disabled,
+.btn.disabled{
+		opacity: 1.0;
+}
+
+button, button:active, button.active, button[active],
+button:focus,
+.btn:focus{
+	outline: none;
+	box-shadow: none;
+}
+
+/*ページトップ部分、戻るボタンと文字列を横並びにしたいのでflex row */
+.page_title {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	background-color: rgba(38,41,52,1);
+	color: rgba(255,255,255,1);
+}
+/*タイトル部分をflex-growで広げるように設定（タイトル部分のクラスがなかったため input直後のdivに設定）*/
+.page_title input + div{
+	flex-grow: 1;
+}
+/*「トップページに戻る」部分のボタン設定*/
+.page_title .return_top .btn{
+	position: static;
+	left: 0;
+	margin: 5px;
+	padding: 2px 1em;
+	text-decoration: none;
+}
+
+/*ボタン*/
+.btn .fas + span{ margin-left: 0.5em;}
+
+input{
+	font-size: 1rem;
+}
+
+table thead th{
+	text-align: left;
+}
