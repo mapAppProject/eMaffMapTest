@@ -1,0 +1,11 @@
+﻿@model Tm2TestAppService.Models.LoginModel
+
+@{
+    ViewBag.Title = "変更しました";
+}
+
+<h2>@ViewBag.Title</h2>
+<h3> @Html.Encode(ViewData["PostData"])</h3>
+<p>AzureFunctionsからの戻り値： @ViewBag.Message</p>
+
+@Html.ActionLink("MAPへ", "Map", "Map", new { area = "eMaffMapArea" }, new { @class = "btn btn-primary" })

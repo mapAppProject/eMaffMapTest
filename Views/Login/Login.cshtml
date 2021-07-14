@@ -5,22 +5,34 @@
 }
 
 <h2>@ViewBag.Title</h2>
-@using (Html.BeginForm())
+<div class="jumbotron">
+    <p>
+        ログインと言いつつ、ログイン処理は行っていません。<br />
+        AzureFunctionsを用いて、Azure SQL データベース内のデータを変更しています。<br />
+        IDに1～3を入れて、名前を変えると、dbo.PersonのNameが変更されます。</p>
+</div>
+
+@using (Html.BeginForm(
+    "Map",
+    "Home",
+    null,
+    FormMethod.Post,
+    new { area = "eMaffMapArea" })
+)
 {
     <div>
-        @Html.LabelFor(model => model.Id)
-        @Html.EditorFor(model => model.Id)
+        @Html.LabelFor(model => model.ID)
+        @Html.EditorFor(model => model.ID)
     </div>
     <div>
-        @Html.LabelFor(model => model.Password)
-        @Html.PasswordFor(model => model.Password)
+        @Html.LabelFor(model => model.Name)
+        @Html.EditorFor(model => model.Name)
     </div>
     <div>
-        @Html.CheckBoxFor(model => model.RememberMe)
-        @Html.LabelFor(model => model.RememberMe)
+        @Html.LabelFor(model => model.Age)
+        @Html.TextBoxFor(model => model.Age, new { disabled = "" })
     </div>
     <div>
         <input type="submit" value="ログイン" />
-        @Html.ActionLink("MAPへ", "Map", "Map", new { area = "eMaffMapArea" }, new { @class = "" })
     </div>
 }

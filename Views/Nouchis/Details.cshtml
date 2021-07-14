@@ -1,0 +1,58 @@
+﻿@model Tm2TestAppService.Models.Nouchi
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Nouchi</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Chiban)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Chiban)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Sakuki)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Sakuki)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SakumotsuMei)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SakumotsuMei)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Chimoku)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Chimoku)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Area)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Area)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.MapDataID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

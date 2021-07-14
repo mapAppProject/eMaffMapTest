@@ -5,22 +5,30 @@ namespace Tm2TestAppService.Models
     public class LoginModel
     {
         /// <summary>
-        /// ログインID
+        /// ID
         /// </summary>
-        [Display(Name = "ログインID")]
-        public string Id { get; set; }
+        [Display(Name = "ID")]
+        public string ID { get; set; }
 
         /// <summary>
-        /// ログインパスワード
+        /// 氏名
         /// </summary>
-        [Display(Name = "パスワード")]
-        [DataType(DataType.Password)]
-        public string Password { get; set; }
+        [Display(Name = "氏名")]
+        public string Name { get; set; }
 
         /// <summary>
-        /// このアカウントを記憶する
+        /// 年齢
         /// </summary>
-        [Display(Name = "このアカウントを記憶する")]
-        public bool RememberMe { get; set; }
+        [Display(Name = "年齢")]
+        public string Age { get; set; }
+    }
+
+    public class LoginResult
+    {
+        public int ID;
+        public string Name;
+        public int Age;
+        public string Result;
+
     }
 }

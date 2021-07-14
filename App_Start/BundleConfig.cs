@@ -14,6 +14,13 @@ namespace Tm2TestAppService
             bundles.Add(new ScriptBundle("~/bundles/jqueryval").Include(
                         "~/Scripts/jquery.validate*"));
 
+            bundles.Add(new ScriptBundle("~/bundles/map").Include(
+                        "~/Scripts/jquery.csv.min.js",
+                        "~/Scripts/popper.min.js",
+                        "~/Scripts/bootstrap.min.js",
+                        "~/Scripts/Map_Control_0.js",
+                        "~/Scripts/Map_Control.js"));
+
             // 開発と学習には、Modernizr の開発バージョンを使用します。次に、実稼働の準備が
             // 運用の準備が完了したら、https://modernizr.com のビルド ツールを使用し、必要なテストのみを選択します。
             bundles.Add(new ScriptBundle("~/bundles/modernizr").Include(
@@ -25,6 +32,13 @@ namespace Tm2TestAppService
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
                       "~/Content/site.css"));
+
+            bundles.Add(new StyleBundle("~/Content/map").Include(
+                      "~/Content/bootstrap.min.css",
+                      "~/Content/eMAFF_common.css",
+                      "~/Content/map.css",
+                      "~/Content/map_control.css"));
+
         }
     }
 }
