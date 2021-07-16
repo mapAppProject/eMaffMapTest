@@ -14,7 +14,8 @@
           <Property Name="Sakuki" Type="nvarchar" MaxLength="50" />
           <Property Name="SakumotsuMei" Type="nvarchar" MaxLength="50" />
           <Property Name="Chimoku" Type="nvarchar" MaxLength="50" />
-          <Property Name="Area" Type="int" />
+          <Property Name="Area" Type="float" />
+          <Property Name="OwnerID" Type="int" />
         </EntityType>
         <EntityContainer Name="SampleDatabaseModelStoreContainer">
           <EntitySet Name="Nouchi" EntityType="Self.Nouchi" Schema="dbo" store:Type="Tables" />
@@ -35,29 +36,30 @@
           <Property Name="Sakuki" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="SakumotsuMei" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="Chimoku" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="Area" Type="Int32" />
+          <Property Name="Area" Type="Double" />
+          <Property Name="OwnerID" Type="Int32" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
-      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="SampleDatabaseModelStoreContainer" CdmEntityContainer="SampleDatabaseEntities">
-        <EntitySetMapping Name="NouchiSet">
-            <EntityTypeMapping TypeName="SampleDatabaseModel.Nouchi">
-              <MappingFragment StoreEntitySet="Nouchi">
-                <ScalarProperty Name="Area" ColumnName="Area" />
-                <ScalarProperty Name="Chimoku" ColumnName="Chimoku" />
-                <ScalarProperty Name="SakumotsuMei" ColumnName="SakumotsuMei" />
-                <ScalarProperty Name="Sakuki" ColumnName="Sakuki" />
-                <ScalarProperty Name="Chiban" ColumnName="Chiban" />
+    <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="SampleDatabaseModelStoreContainer" CdmEntityContainer="SampleDatabaseEntities">
+    <EntitySetMapping Name="NouchiSet">
+      <EntityTypeMapping TypeName="IsTypeOf(SampleDatabaseModel.Nouchi)">
+        <MappingFragment StoreEntitySet="Nouchi">
+          <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
                 <ScalarProperty Name="MapDataID" ColumnName="MapDataID" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-        </EntityContainerMapping>
-      </Mapping>
-    </edmx:Mappings>
+          <ScalarProperty Name="Chiban" ColumnName="Chiban" />
+          <ScalarProperty Name="Sakuki" ColumnName="Sakuki" />
+          <ScalarProperty Name="SakumotsuMei" ColumnName="SakumotsuMei" />
+          <ScalarProperty Name="Chimoku" ColumnName="Chimoku" />
+          <ScalarProperty Name="Area" ColumnName="Area" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping></edmx:Mappings>
   </edmx:Runtime>
   <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
   <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
@@ -71,7 +73,7 @@
         <DesignerProperty Name="ValidateOnBuild" Value="true" />
         <DesignerProperty Name="EnablePluralization" Value="false" />
         <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
-        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="UseLegacyProvider" Value="False" />
         <DesignerProperty Name="CodeGenerationStrategy" Value="なし" />
       </DesignerInfoPropertySet>
     </Options>

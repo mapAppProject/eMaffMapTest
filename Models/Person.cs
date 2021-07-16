@@ -12,14 +12,10 @@ namespace Tm2TestAppService.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class Nouchi
+    public partial class Person
     {
-        public int MapDataID { get; set; }
-        public string Chiban { get; set; }
-        public string Sakuki { get; set; }
-        public string SakumotsuMei { get; set; }
-        public string Chimoku { get; set; }
-        public Nullable<double> Area { get; set; }
-        public Nullable<int> OwnerID { get; set; }
+        public int ID { get; set; }
+        public string Name { get; set; }
+        public Nullable<short> Age { get; set; }
     }
 }

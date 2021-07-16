@@ -9,7 +9,8 @@
     <p>
         ログインと言いつつ、ログイン処理は行っていません。<br />
         AzureFunctionsを用いて、Azure SQL データベース内のデータを変更しています。<br />
-        IDに1～3を入れて、名前を変えると、dbo.PersonのNameが変更されます。</p>
+        IDに1～3を入れて、名前を変えると、dbo.PersonのNameが変更されます。
+    </p>
 </div>
 
 @using (Html.BeginForm(
@@ -36,3 +37,7 @@
         <input type="submit" value="ログイン" />
     </div>
 }
+
+<div>
+    <p>@Html.ActionLink("Azure SQL Databaseへの接続", "Index", "Person", null,new { @class = "btn btn-primary" } ) </p>
+</div>
